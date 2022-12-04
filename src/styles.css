@@ -1,0 +1,82 @@
+body {
+  overflow: visible !important;
+  background: linear-gradient(250deg, #7b2ff7, #f107a3) !important;
+height: 2000px !important;
+}
+
+.mainDiv{
+  display: flex !important;
+   flex-direction: column !important;
+   width:100% !important;
+   background-color: transparent !important;
+}
+.example-container {
+  height: 50vh !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height:40rem !important;
+  background-color: transparent !important;
+}
+
+.buttonss{
+  position: absolute;
+  z-index: 2;
+  width:100px;
+display: flex;
+justify-content: space-between;
+margin-top: 650px;
+background-color: transparent !important;
+}
+
+.next,
+.prev {
+  background: linear-gradient(250deg, #6bf72f, #f107a3);
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
+
+
+img {
+  position: absolute;
+  max-width: 800px;
+  max-height: 600px;
+  border-radius: 12px;
+  background-color: transparent !important;
+
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent !important;
+
+}

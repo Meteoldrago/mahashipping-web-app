@@ -1,10 +1,12 @@
 import * as React from 'react';
-import './App.css';
 import Wireframe from './WireFrame/WireFrame';
 
 function App() {
   return (
-    <Wireframe/>
+    <div className="example-container">
+      <Wireframe/>
+</div>
+    
   );
 }
 
