@@ -1,4 +1,3 @@
-import * as React from 'react';
 import './App.css';
 import Wireframe from './WireFrame/WireFrame';
 
