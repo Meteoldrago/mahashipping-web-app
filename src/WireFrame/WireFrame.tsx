@@ -8,7 +8,7 @@ function Wireframe() {
         <Router basename="/">
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path={`/login`} element={<AboutUs />} />
+                <Route path={`/aboutUs`} element={<AboutUs />} />
             </Routes>
         </Router>
     );
