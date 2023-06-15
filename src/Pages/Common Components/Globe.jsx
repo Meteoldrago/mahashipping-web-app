@@ -10,9 +10,9 @@ export default function Globe() {
         const globe = createGlobe(canvasRef.current, {
             baseColor: [0.3, 0.3, 0.3],
             markerColor: [0.1, 0.8, 1],
-            devicePixelRatio: 2,
-            width: 2050,
-            height: 1200,
+            devicePixelRatio: 1,
+            width: 2200,
+            height: 950,
             glowColor: [1, 1, 1],
             diffuse: 3,
             mapBrightness: 2,
@@ -40,7 +40,15 @@ export default function Globe() {
     return (
         <canvas
             ref={canvasRef}
-            style={{ background: "rgba(0, 255, 255, 0)", top: "60%", zIndex: "9999", height: "600px", maxHeight: "600px", maxWidth: "100%", position: "absolute", maxWidth: "1000px", alignContent: "center", display: "flex", }}
+            style={{
+                background: "rgba(0, 255, 255, 0)",
+                top: "17%",
+                zIndex: "9999",
+                height: "1100px",
+                position: "absolute",
+                alignContent: "center",
+                display: "flex",
+            }}
         />
     );
 }
