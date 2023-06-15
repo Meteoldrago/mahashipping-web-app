@@ -1,10 +1,4 @@
-.slide-container {
-  width: 100%;
-}
-
-.slide-content {
-  text-align: center;
-  margin-top: 200px !important;
+.slide-content-from-left {
   margin-left: 50% !important;
   transform: translateX(-200%);
   opacity: 0;
@@ -39,6 +33,10 @@
   animation: delay-elements 5.5s ease-out forwards;
 }
 
+.isVisited {
+  opacity: 0;
+  scale: 0;
+}
 
 @keyframes delay-elements {
   0% {
