@@ -1,27 +1,15 @@
-import { useEffect, useState } from 'react';
+import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect } from 'react';
 
-export default function CountdownProvider({ number, duration }) {
-
-    const [count, setCount] = useState("0")
+export default function CountdownProvider({ number, duration, style, className }) {
+    const count = useMotionValue(0);
+    const rounded = useTransform(count, Math.round);
 
     useEffect(() => {
-        let start = 0;
-        const end = parseInt(number.substring(0, 3))
-        if (start === end) return;
-        let totalMilSecDur = parseInt(duration);
-        let incrementTime = (totalMilSecDur / end) * 1000;
-        let timer = setInterval(() => {
-            start += 1;
-            setCount(String(start) + number.substring(3))
-            if (start === end) clearInterval(timer)
-        }, incrementTime);
-        return () => clearInterval(timer);
-    }, [number, duration]);
+        const animation = animate(count, number, { duration: duration });
+        return animation.stop;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    return (
-        <>
-            {count}
-        </>
-    );
+    return <motion.p className={className} style={{ style }}>{rounded}</motion.p>;
 }
-
