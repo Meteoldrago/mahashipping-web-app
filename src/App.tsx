@@ -1,9 +1,10 @@
 import './App.css';
-import Wireframe from './WireFrame/WireFrame';
+import Home from './Pages/home';
+// import Wireframe from './WireFrame/WireFrame';
 
 function App() {
   return (
-    <Wireframe/>
+    <Home/>
   );
 }
 
