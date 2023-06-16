@@ -1,4 +1,4 @@
-.desktop {
+.ms-home-container {
     width: 100%;
     height: min-content;
     /* 4399px */
@@ -16,7 +16,7 @@
     border-radius: 0px 0px 0px 0px;
 }
 
-.hero {
+.ms-introduction-container {
     box-sizing: border-box;
     flex-shrink: 0;
     width: 100%;
@@ -35,7 +35,7 @@
     border-radius: 0px 0px 0px 0px;
 }
 
-.content {
+.ms-introduction-contents {
     flex-shrink: 0;
     flex: 1 0 0px;
     width: 1px;
@@ -55,7 +55,7 @@
     border-radius: 0px 0px 0px 0px;
 }
 
-.links {
+.ms-introduction-header-items {
     flex-shrink: 0;
     width: 100%;
     height: min-content;
@@ -73,7 +73,7 @@
     border-radius: 0px 0px 0px 0px;
 }
 
-.sky-high-logistics_ {
+.ms-introduction-header-items-left {
     flex-shrink: 0;
     flex: 1 0 0px;
     width: 1px;
@@ -94,7 +94,7 @@
     text-align: left;
 }
 
-.get-started {
+.ms-introduction-header-items-right {
     flex-shrink: 0;
     flex: 1 0 0px;
     width: 1px;
@@ -115,7 +115,13 @@
     text-align: right;
 }
 
-.s-h-i-p {
+.ms-introduction-contents-circle-image {
+    position: absolute;
+    scale: 1.6;
+    top:35%
+}
+
+.ms-introduction-item-text-content {
     flex-shrink: 0;
     width: 1000px;
     height: auto;
