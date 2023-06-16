@@ -2,7 +2,6 @@
 .ms-home-container {
     width: 100%;
     height: min-content;
-    /* 4399px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -381,20 +380,12 @@
     text-align: left;
 }
 
-.q-a {
-    display: flex;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center;
-}
-
 /* Testimonial */
 .testimonials {
     box-sizing: border-box;
     flex-shrink: 0;
     width: 100%;
     height: min-content;
-    /* 700px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
