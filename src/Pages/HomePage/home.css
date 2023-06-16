@@ -485,6 +485,10 @@
     border-right-width: 0px;
 }
 
+.homepage-footer-mobile {
+    display: block;
+}
+
 .homepage-footer-items {
     overflow: visible;
     position: relative;

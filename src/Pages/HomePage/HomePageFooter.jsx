@@ -21,7 +21,7 @@ export default function HomePageFooter() {
     ];
 
     return (
-        <footer className="homepage-footer">
+        <footer className={isMobileView ? "homepage-footer-mobile homepage-footer" : "homepage-footer"}>
             <Grid container maxWidth={'1400px'} display={"flex"} maxHeight={isMobileView ? "none" : "250px"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"} >
                 {footerElements.map((footerElement, index) => {
                     return (
