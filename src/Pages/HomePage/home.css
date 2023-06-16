@@ -172,7 +172,6 @@
 }
 
 .wrapper {
-    flex-shrink: 0;
     width: 1000px;
     height: min-content;
     /* 480px */
@@ -185,15 +184,17 @@
     position: relative;
     padding: 0px 0px 0px 0px;
     align-content: center;
-    flex-wrap: nowrap;
     gap: 60;
     border-radius: 0px 0px 0px 0px;
+}
+
+.wrapper-mobile {
+    flex-direction: column !important;
 }
 
 .left {
     flex-shrink: 0;
     flex: 1 0 0px;
-    width: 1px;
     height: min-content;
     /* 193px */
     display: flex;
