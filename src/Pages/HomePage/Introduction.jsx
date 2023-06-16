@@ -10,7 +10,7 @@ export default function Introduction() {
     const imgEl = useRef(null);
     const [imgElLoaded, setImgElLoaded] = useState(false);
     const onImageLoad = () => setImgElLoaded(true);
-    const [isDesktopView, isMobileView] = [useMediaQuery('(min-width:1018px)'), useMediaQuery('(max-width:650px)')]
+    const [isDesktopView, isMobileView] = [useMediaQuery('(min-width:1200px)'), useMediaQuery('(max-width:650px)')]
 
     const shipTextMotionEffects = useMemo(() => {
         return {

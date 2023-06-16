@@ -171,78 +171,15 @@
     border-radius: 0px 0px 0px 0px;
 }
 
-.wrapper {
-    width: 1000px;
-    height: min-content;
-    /* 480px */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 0px 0px 0px 0px;
-    align-content: center;
-    gap: 60;
-    border-radius: 0px 0px 0px 0px;
-}
-
-.wrapper-mobile {
-    flex-direction: column !important;
-}
-
-.left {
-    flex-shrink: 0;
-    flex: 1 0 0px;
-    height: min-content;
-    /* 193px */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-    position: relative;
-    padding: 0px 0px 0px 0px;
-    align-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 20;
-    border-radius: 0px 0px 0px 0px;
-}
-
 .ms-home-details-secition-1-content-first-half-left-header {
-    flex-shrink: 0;
-    width: 75%;
-    height: auto;
-    /* 77px */
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow: visible;
-    flex: 1 0 0px;
-    position: relative;
     font-weight: 400;
     font-style: normal;
     font-family: "Jua", "Jua Placeholder", sans-serif;
     color: #ffffff;
     font-size: 32px;
-    letter-spacing: 0em;
-    line-height: 1.2;
-    text-align: left;
 }
 
 .ms-home-details-secition-1-content-first-half-left-content {
-    flex-shrink: 0;
-    width: 75%;
-    height: auto;
-    /* 96px */
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 400px;
-    overflow: visible;
-    flex: 1 0 0px;
-    position: relative;
     font-weight: 500;
     font-style: normal;
     font-family: "Instrument Sans", sans-serif;
@@ -254,16 +191,11 @@
 }
 
 .ms-home-details-secition-1-content-first-half-flight-view-image {
-    flex-shrink: 0;
-    flex: 1 0 0px;
-    width: 50%;
-    height: 500px;
-    display: block;
+    max-height: 400px;
+    min-height: 300px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     mix-blend-mode: luminosity;
-    overflow: hidden;
-    position: relative;
     aspect-ratio: 0.98 / 1;
     background-image: url('../../icons/flightwindowview.jpg');
     background-size: cover;
@@ -272,67 +204,18 @@
     border-radius: 40px;
 }
 
-
-
 .ms-home-details-secition-1-content-second-half-container-image {
-    flex-shrink: 0;
-    flex: 1 0 0px;
-    width: 1px;
-    height: 300px;
-    display: block;
+    max-height: 400px;
+    min-height: 300px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     mix-blend-mode: luminosity;
-    overflow: hidden;
-    position: relative;
     aspect-ratio: 0.98 / 1;
     background-image: url('../../icons/containers.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 40px;
-    margin: 40px 40px 40px 0px
-}
-
-.ms-home-details-secition-1-content-second-half-left-header {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    /* 77px */
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow: visible;
-    position: relative;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "Jua", "Jua Placeholder", sans-serif;
-    color: #ffffff;
-    font-size: 32px;
-    letter-spacing: 0em;
-    line-height: 1.2;
-    text-align: left;
-}
-
-.ms-home-details-secition-1-content-second-half-left-content {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    /* 96px */
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 400px;
-    overflow: visible;
-    position: relative;
-    font-weight: 500;
-    font-style: normal;
-    font-family: "Instrument Sans", sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: 0em;
-    line-height: 1.5;
-    text-align: left;
 }
 
 /* Get In Touch */
@@ -341,7 +224,6 @@
     flex-shrink: 0;
     width: 100%;
     height: min-content;
-    /* 584px */
     display: flex;
     flex-direction: column;
     justify-content: center;
