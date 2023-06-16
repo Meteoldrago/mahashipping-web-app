@@ -1,8 +1,10 @@
+import { useMediaQuery } from "@mui/material";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 
 export default function Globe() {
     const canvasRef = useRef();
+    const isMobileView = useMediaQuery('(max-width:650px)');
 
     useEffect(() => {
         let phi = 0;
@@ -11,8 +13,8 @@ export default function Globe() {
             baseColor: [0.3, 0.3, 0.3],
             markerColor: [0.1, 0.8, 1],
             devicePixelRatio: 1,
-            width: 2200,
-            height: 950,
+            width: isMobileView ? 600 : 2200,
+            height: isMobileView ? 300 : 950,
             glowColor: [1, 1, 1],
             diffuse: 3,
             mapBrightness: 2,
@@ -35,16 +37,16 @@ export default function Globe() {
         return () => {
             globe.destroy();
         };
-    }, []);
+    }, [isMobileView]);
 
     return (
         <canvas
             ref={canvasRef}
             style={{
                 background: "rgba(0, 255, 255, 0)",
-                top: "17%",
+                top: isMobileView ? "57%" : "17%",
                 zIndex: "9999",
-                height: "1100px",
+                height: isMobileView ? "300px" : "1100px",
                 position: "absolute",
                 alignContent: "center",
                 display: "flex",

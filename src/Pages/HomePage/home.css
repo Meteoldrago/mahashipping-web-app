@@ -141,6 +141,14 @@
     position: absolute;
 }
 
+.ms-introduction-item-text-content-tablet {
+    font-size: 200px !important;
+}
+
+.ms-introduction-item-text-content-mobile {
+    font-size: 150px !important;
+}
+
 /* Home Details Secition-1 */
 
 .section {
