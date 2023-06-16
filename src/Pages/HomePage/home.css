@@ -463,6 +463,7 @@
     box-sizing: border-box;
     flex-shrink: 0;
     width: 100%;
+    max-width: 1440px;
     height: min-content;
     display: flex;
     flex-direction: column;
