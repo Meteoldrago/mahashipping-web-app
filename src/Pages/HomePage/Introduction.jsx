@@ -3,14 +3,18 @@ import { motion } from "framer-motion";
 import Globe from "../Common Components/Globe";
 import circular from '../../icons/circular.png'
 import { useMediaQuery } from "@mui/material";
+import { getBrowserName } from "../../utils";
 
 export default function Introduction() {
 
     const shipScrollRef = useRef(null)
     const imgEl = useRef(null);
-    const [imgElLoaded, setImgElLoaded] = useState(false);
+    const isSafariUsed = useMemo(() => {
+        return getBrowserName() === 'Safari'
+    }, [])
+    const [imgElLoaded, setImgElLoaded] = useState(isSafariUsed);
     const onImageLoad = () => setImgElLoaded(true);
-    const [isDesktopView, isMobileView] = [useMediaQuery('(min-width:1200px)'), useMediaQuery('(max-width:650px)')]
+    const [isDesktopView, isMobileView] = [useMediaQuery('(min-width:1100px)'), useMediaQuery('(max-width:650px)')]
 
     const shipTextMotionEffects = useMemo(() => {
         return {
@@ -19,7 +23,6 @@ export default function Introduction() {
         }
     }, [isDesktopView, isMobileView]);
 
-
     useEffect(() => {
         const imgElCurrent = imgEl.current;
         if (imgElCurrent) {
@@ -27,6 +30,7 @@ export default function Introduction() {
             return () => imgElCurrent.removeEventListener('load', onImageLoad);
         }
     }, [imgEl]);
+
 
     return (
         <div className='ms-introduction-container'>
