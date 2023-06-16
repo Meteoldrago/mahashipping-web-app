@@ -324,27 +324,20 @@
     flex-shrink: 0;
     width: 100%;
     height: min-content;
-    /* 682px */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 100px 100px 100px 100px;
     background-color: #e8ddd0;
-    overflow: hidden;
     position: relative;
     align-content: center;
-    flex-wrap: nowrap;
     gap: 100;
     border-radius: 0px 0px 0px 0px;
 }
 
 .faq-header {
-    flex-shrink: 0;
     width: 100%;
-    height: auto;
-    /* 58px */
-    white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-word;
     max-width: 1000px;
@@ -358,6 +351,10 @@
     letter-spacing: 0em;
     line-height: 1.2;
     text-align: center;
+}
+
+.faq-header-mobile {
+    font-size: 30px !important;
 }
 
 .faq-question {

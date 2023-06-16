@@ -6,7 +6,7 @@ export default function DetailsFirstSection() {
     function DetailsGridRenderer({ header, content }) {
 
         return (
-            <Grid minWidth={'200px'} item xs={isMobileView ? 12 : 5.5} md={isMobileView ? 12 : 5.5} >
+            <Grid minWidth={'200px'} maxWidth={'400px'} item xs={isMobileView ? 12 : 5.5} md={isMobileView ? 12 : 5.5} >
                 <h3 className='ms-home-details-secition-1-content-first-half-left-header'>
                     {header}
                 </h3>

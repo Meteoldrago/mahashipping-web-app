@@ -17,10 +17,10 @@ export default function Testimonial() {
     ]
     return (
         <div className='testimonials'>
-            <Grid container gap={"20px"} columnSpacing={1} spacing={1} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+            <Grid container maxWidth={'1440px'} gap={"20px"} columnSpacing={1} spacing={1} display={"flex"} alignItems={"center"} justifyContent={"center"}>
                 {reviews.map((review, index) => {
                     return (
-                        <Grid item key={index} maxWidth={'400px'} xs={6} md={6} className='card'>
+                        <Grid item key={index} minWidth={'320px'} maxWidth={'400px'} xs={6} md={6} className='card'>
                             {review.imgSrc}
                             <p className='review-review-content'>{review.reviewContent}</p>
                             <p className='review-name'>{review.reviewver}</p>
