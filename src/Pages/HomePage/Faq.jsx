@@ -1,7 +1,13 @@
 import { useMediaQuery } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import { motion } from "framer-motion";
 import { useMemo } from "react";
+export const containerVariants = {
 
+};
+export const dropUpVariants = {
+
+};
 export default function Faq() {
     const isMobileView = useMediaQuery('(max-width:650px)');
 
@@ -14,12 +20,48 @@ export default function Faq() {
         ]
     }, []);
 
+    const container = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0, // this will set a delay before the children start animating
+                staggerChildren: 0.3 // this will set the time inbetween children animation
+            }
+        }
+    }
+
+    const item = {
+        hidden: {
+            y: "100vw"
+        },
+        visible: {
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                mass: 0.3
+                // remove delay: 0.3,
+            }
+        }
+    }
+
+
     return (
         <div className='f-a-q'>
             <h2 className={isMobileView ? "faq-header faq-header-mobile" : 'faq-header'}>Logistics Wizardry - Answered!</h2>
-            <Grid container columnSpacing={1} spacing={1} maxWidth={'1440px'}>
+            <Grid component={motion.div}
+                initial="hidden"
+                whileInView="visible"
+                variants={container}
+                container columnSpacing={1} spacing={1} maxWidth={'1440px'}>
                 {faqs.map((faq, index) => {
-                    return <Grid key={index + faq.question} maxWidth={'400px'} xs={isMobileView ? 12 : 6} md={isMobileView ? 12 : 6} item className='q-a'>
+                    return <Grid key={index + faq.question}
+                        component={motion.div}
+                        variants={item}
+                        maxWidth={'400px'} xs={isMobileView ? 12 : 6} md={isMobileView ? 12 : 6} item className='q-a'>
                         <h2 className='faq-question'>{faq.question}</h2>
                         <h2 className='faq-answer'>{faq.answer}</h2>
                     </Grid>
