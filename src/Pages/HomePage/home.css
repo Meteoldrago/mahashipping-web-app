@@ -97,7 +97,7 @@
 .ms-introduction-header-items-right {
     flex-shrink: 0;
     flex: 1 0 0px;
-    width: 1px;
+    /* width: 1px; */
     height: auto;
     /* 19px */
     white-space: pre-wrap;
