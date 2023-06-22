@@ -44,6 +44,7 @@ export default function DetailsFirstSection() {
         return (
             <Grid
                 component={motion.div}
+                viewport={{ margin: "55px" }}
                 initial={{
                     ...transitions.initial,
                     y: direction === 'left' ? -80200 : 200
@@ -51,10 +52,9 @@ export default function DetailsFirstSection() {
                 whileInView={{
                     ...transitions.whileInView,
                     y: direction === 'left' ? 0 : 0,
-
-
                 }}
-                className={imgCss} minWidth={'200px'}
+                className={imgCss} 
+                minWidth={'200px'}
                 item xs={isMobileView ? 12 : 5.5}
                 md={isMobileView ? 12 : 5.5}>
             </Grid>
