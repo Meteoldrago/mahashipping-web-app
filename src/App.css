@@ -110,6 +110,7 @@
   overflow-y: auto !important;
   display: flex;
   flex-direction: column;
+  width: 100% !important;
 }
 
 .ms-get-started-paragraphs {
