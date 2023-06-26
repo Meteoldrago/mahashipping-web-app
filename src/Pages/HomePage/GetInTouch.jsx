@@ -77,6 +77,7 @@ export default function GetInTouch() {
                             type="email"
                             value={email || ""}
                             onChange={(e) => setEmail(e.target.value)}
+                            onKeyUp={(e) => e.key === "Enter" && handleClickSubscribe()}
                         // error={isEmailValid === null}
                         // helperText={isEmailValid ? "" : "Please enter a valid email address"}
                         />
