@@ -2,14 +2,17 @@ import { useMediaQuery } from "@mui/material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Notify from "../Common Components/Notifiy";
+import emailjs from '@emailjs/browser';
 
 
 export default function GetInTouch() {
     const isMobileView = useMediaQuery('(max-width:650px)');
     const [showAlert, setShowAlert] = useState({ show: false, variant: "success", message: '' })
     const [email, setEmail] = useState(null)
+    const form = useRef();
+
     const isEmailValid = useMemo(() => {
         if (email)
             return email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)
@@ -24,9 +27,16 @@ export default function GetInTouch() {
         }
     }, []);
 
-    function handleClickSubscribe() {
+    function handleClickSubscribe(e) {
+        e.preventDefault();
         if (email.length > 0) {
             if (isEmailValid) {
+                emailjs.sendForm('GmailPV', 'Welcome', form.current, 'fWbl6GA8dSGy36gBf')
+                    .then((result) => {
+                        console.log(result.text);
+                    }, (error) => {
+                        console.log(error.text);
+                    });
                 setShowAlert((prev) => ({ ...prev, show: true, message: "Successfully Subscribed", variant: 'success' }))
                 setEmail("")
             } else {
@@ -68,29 +78,30 @@ export default function GetInTouch() {
                             Drop your details and we’ll swiftly reach out to discuss your logistics needs. Discover a world of possibilities with our world-class service.
                         </p>
                     </div>
-                    <div className={isMobileView ? 'get-in-touch-container-footer-mobile' : "get-in-touch-container-footer"}>
+                    <form id="email-form" ref={form} onSubmit={handleClickSubscribe} className={isMobileView ? 'get-in-touch-container-footer-mobile' : "get-in-touch-container-footer"}>
                         <TextField
                             InputProps={{ sx: { "& input": { color: 'rgb(0, 43, 54)', height: "10px" } } }}
+                            name="to_email"
                             sx={{ marginTop: "0px" }}
                             className='get-in-touch-container-footer-input-field'
                             placeholder='name@email.com'
                             type="email"
                             value={email || ""}
                             onChange={({ target: { value } }) => setEmail(value)}
-                            onKeyUp={({ key }) => key === "Enter" && handleClickSubscribe()}
-                        // error={isEmailValid === null}
-                        // helperText={isEmailValid ? "" : "Please enter a valid email address"}
+                            error={isEmailValid === null}
+                            helperText={isEmailValid ? "" : "Please enter a valid email address"}
                         />
                         <Button
-                            component={motion.div}
+                            component={motion.button}
                             whileHover={{
                                 scale: 1.3,
                                 marginLeft: "20px"
                             }}
                             whileTap={{ scale: 1.3 }}
-                            onClick={handleClickSubscribe}
+                            type="submit"
+                            form="email-form"
                             className='get-in-touch-container-footer-subscribe-button' variant='contained' >Subscribe</Button>
-                    </div>
+                    </form>
                 </motion.div>
             </div >
             {showAlert.show && <Notify openNotify={showAlert.show} message={showAlert.message} variant={showAlert.variant} onClose={setShowAlert} />}
